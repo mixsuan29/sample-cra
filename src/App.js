@@ -37,6 +37,7 @@ function App() {
         >
           Learn React
         </a>
+        <button type="button" className="btn btn-primary">Primary</button>
         { text }
         <Input id="sampleText" text="這是input" 
           value={text} onChangeHandler={onChangeHandler}></Input>

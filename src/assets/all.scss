@@ -1,6 +1,4 @@
-// 新增變數
-$body-color: #CCC;
+@import "bootstrap/scss/functions";
 
-.App-header{
-    background-color: $body-color;
-}
+@import "./variables";
+@import "bootstrap/scss/bootstrap";
