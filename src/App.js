@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+// 外部套件
+
 import logo from './assets/logo.svg';
 import './assets/App.css';
 import Input from './components/Input';
+
+// axios
 
 function App() {
   const [text, setText] = useState('');
   const onChangeHandler = (e) => {
     setText(e.target.value);
   }
+  // 環境當已引入單一資源，CRA 環境會直接幫你引入
+  useEffect(() => {
+    (async() => {
+      const result = await axios.get('https://randomuser.me/api/');
+      console.log(result);
+    })();
+  }, [])  
 
   return (
     <div className="App">
