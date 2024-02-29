@@ -5,6 +5,7 @@ import axios from "axios";
 import logo from './assets/logo.svg';
 import './assets/App.css';
 import Input from './components/Input';
+import './assets/all.scss'
 
 // axios
 
