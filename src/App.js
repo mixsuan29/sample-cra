@@ -17,7 +17,8 @@ function App() {
   // 環境當已引入單一資源，CRA 環境會直接幫你引入
   useEffect(() => {
     (async() => {
-      const result = await axios.get('https://randomuser.me/api/');
+      const path = process.env.REACT_APP_PATH
+      const result = await axios.get(path);
       console.log(result);
     })();
   }, [])  
